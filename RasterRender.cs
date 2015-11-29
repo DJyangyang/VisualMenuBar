@@ -193,6 +193,8 @@ namespace VisualMenuBar
                 //classify.Classify(vValues, longvalues, ref numClasses);
                 #endregion
                 double[] Classes = classify.ClassBreaks as double[];
+                int n = Classes.Count();
+                double dn = Classes[0];
                 UID pUid = classify.ClassID;
                 IRasterClassifyUIProperties rasClassifyUI = rasClassifyRender as IRasterClassifyUIProperties;
                 rasClassifyUI.ClassificationMethod = pUid;
